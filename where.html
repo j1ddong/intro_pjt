@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About where</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+			crossorigin="anonymous"
+		></script>
+		<style>
+			.center {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.korea:hover {
+				border: 2px solid blue;
+				border-radius: 15%;
+				padding: 13px;
+			}
+			.japan:hover {
+				border-radius: 15%;
+				padding: 13px;
+				border: 2px solid blue;
+			}
+		</style>
+		<script>
+			let nationality = null;
+			const clickKorea = () => {
+				location.href = './korea.html';
+			};
+			const clickJapan = () => {
+				nationality = './japan.html';
+			};
+		</script>
+	</head>
+	<body>
+		<div
+			class="container text-center my-auto d-flex justify-content-center center"
+		>
+			<div class="korea me-2" onclick="clickKorea()">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIXnCMwn1tLeeJNFYNxb03i04OVgoMZV9QGA&usqp=CAU"
+					alt="Korea-flag"
+				/>
+				<p class="fw-bold">KOREA</p>
+			</div>
+			<div class="japan ms-2">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJv26EaVwxip61Zuq7Tc_MVz3-aYYWVaZ6qA&usqp=CAU"
+					alt="Japan-flag"
+				/>
+				<p class="fw-bold" onclick="clickJapan()">JAPAN</p>
+			</div>
+		</div>
+	</body>
+</html>
